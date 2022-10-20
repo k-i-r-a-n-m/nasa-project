@@ -1,6 +1,6 @@
 // import { response } from "../../../server/src/app";
 
-const API_URL = "http://localhost:8000/v1";
+const API_URL = "v1";
 async function httpGetPlanets() {
   // TODO: Once API is ready.
   // Load planets and return as JSON.
@@ -39,12 +39,12 @@ async function httpAbortLaunch(id) {
   // Delete launch with given ID.
   try {
     return await fetch(`${API_URL}/launches/${id}`, {
-      method:'DELETE'
-    })
+      method: "DELETE",
+    });
   } catch (err) {
     return {
-      ok:false
-    }
+      ok: false,
+    };
   }
 }
 
